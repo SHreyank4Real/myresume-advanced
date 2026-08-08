@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-app
+  namespace: resume
+  labels:
+    app: resume
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: resume
+  template:
+    metadata:
+      labels:
+        app: resume
+    spec:
+      containers:
+        - name: app
+          image: resume-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: resume-config
+            - secretRef:
+                name: resume-secrets
+                optional: true
+          readinessProbe:
+            httpGet:
+              path: /api/stats
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /api/stats
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: "1"
+              memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: resume
+  namespace: resume
+spec:
+  type: ClusterIP
+  selector:
+    app: resume
+  ports:
+    - name: http
+      port: 80
+      targetPort: http

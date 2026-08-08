@@ -1,0 +1,45 @@
+.wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  background: var(--green4);
+  border-bottom: 1px solid var(--green3);
+  overflow: hidden;
+}
+
+.label {
+  background: var(--green);
+  color: var(--bg);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 0 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.track {
+  display: flex;
+  animation: ticker 28s linear infinite;
+  white-space: nowrap;
+}
+
+.item {
+  font-size: 11px;
+  color: var(--green);
+  letter-spacing: 0.14em;
+  padding: 0 28px;
+  opacity: 0.85;
+}
+
+.sep {
+  color: var(--yellow);
+  margin-left: 28px;
+}

@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: resume
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: resume-config
+  namespace: resume
+data:
+  NODE_ENV: "production"
+  PORT: "3000"
+  HOSTNAME: "0.0.0.0"
+  # Prefer REDIS_URL, or use split vars below
+  REDIS_URL: "redis://redis.resume.svc.cluster.local:6379/0"
+  # REDIS_HOST: "redis"
+  # REDIS_PORT: "6379"
+  # REDIS_DB: "0"
+---
+# Optional — only needed if Redis requires auth
+apiVersion: v1
+kind: Secret
+metadata:
+  name: resume-secrets
+  namespace: resume
+type: Opaque
+stringData:
+  # REDIS_PASSWORD: "change-me"
+  REDIS_PASSWORD: ""

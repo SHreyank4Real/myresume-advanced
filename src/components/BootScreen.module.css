@@ -1,0 +1,60 @@
+.boot {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 80px;
+  transition: opacity 0.55s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header {
+  color: var(--white);
+  margin-bottom: 24px;
+  font-size: 13px;
+}
+
+.dots {
+  color: var(--yellow);
+  display: inline-block;
+  min-width: 1.5em;
+}
+
+.line {
+  font-size: 13px;
+  color: var(--green2);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.12s ease, transform 0.12s ease;
+  line-height: 1.85;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dim {
+  color: var(--muted);
+}
+
+.bright {
+  color: var(--white);
+}
+
+.okTag {
+  color: var(--green);
+}
+
+@media (max-width: 600px) {
+  .boot {
+    padding: 40px 24px;
+  }
+}

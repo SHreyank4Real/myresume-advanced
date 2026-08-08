@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  border: 1px solid var(--border);
+  padding: 20px;
+  background: rgba(15, 26, 15, 0.5);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.item:hover {
+  border-color: var(--border2);
+  background: var(--dim);
+}
+
+.path {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+
+.valid {
+  color: var(--green);
+  margin-left: 8px;
+}
+
+.award {
+  color: var(--yellow);
+  margin-left: 8px;
+}
+
+.title {
+  color: var(--white);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.org {
+  color: var(--comment);
+  font-size: 12px;
+}

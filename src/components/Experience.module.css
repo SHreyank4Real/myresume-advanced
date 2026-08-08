@@ -1,0 +1,63 @@
+.wrap {
+  max-width: 1100px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.card {
+  border-left: 2px solid var(--border2);
+  padding-left: 24px;
+}
+
+.head {
+  margin-bottom: 16px;
+}
+
+.period {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.active {
+  color: var(--green);
+  margin-left: 12px;
+  font-size: 11px;
+}
+
+.title {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.company {
+  color: var(--cyan);
+  font-size: 13px;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bullets li {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.tag {
+  color: var(--yellow);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  margin-right: 6px;
+}

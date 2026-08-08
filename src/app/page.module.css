@@ -1,0 +1,9 @@
+.main {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  padding-top: 28px;
+}
+
+.visible {
+  opacity: 1;
+}
