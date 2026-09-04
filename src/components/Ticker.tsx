@@ -3,6 +3,7 @@ import styles from "./Ticker.module.css";
 const ITEMS = [
   "SITE RELIABILITY",
   "KUBERNETES",
+  "KARGO",
   "AWS",
   "OBSERVABILITY",
   "IaC",
