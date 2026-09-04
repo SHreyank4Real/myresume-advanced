@@ -39,10 +39,10 @@ export const profile = {
   name: "M S Shreyank Sharma",
   shortName: "shreyank",
   host: "prod-01",
-  role: "DevOps / Site Reliability Engineer",
+  role: "Senior DevOps Engineer",
   credential: "CKA",
   experienceYears: "6+ years",
-  location: "Udupi, India",
+  location: "Mangalore, India",
   email: "sharma.shreyank6@gmail.com",
   phone: "+91 94489 55246",
   github: "SHreyank4Real",
@@ -50,9 +50,9 @@ export const profile = {
   linkedin: "shreyank-sharma",
   linkedinUrl: "https://linkedin.com/in/shreyank-sharma",
   about:
-    "DevOps / SRE with 6+ years of experience in AWS, Kubernetes, and cloud migrations. Expert in IaC, automation, and observability. Certified Kubernetes Administrator. Strong record in production incident response and cluster reliability engineering.",
+    "Senior DevOps Engineer with 6+ years in AWS, Kubernetes, and GitOps. Currently at EG A/S delivering Kargo-based promotions, cluster upgrades, and observability. Previously DBA L3 at Cisco via TEKsystems. Certified Kubernetes Administrator with a strong record in production incident response and cluster reliability.",
   tagline:
-    "Building reliable cloud systems — AWS, Kubernetes, and observability at scale.",
+    "Building reliable GitOps platforms — Kubernetes, Kargo, and observability at scale.",
 };
 
 export const asciiName = ` ____  _                          _    
@@ -68,17 +68,43 @@ export const pods: Pod[] = [
   { name: "helm-charts", type: "deploy", age: "3y" },
   { name: "prometheus-grafana", type: "observability", age: "4y" },
   { name: "argocd-gitops", type: "cicd", age: "1y" },
+  { name: "kargo-promotions", type: "gitops", age: "4m" },
   { name: "elk-logging", type: "observability", age: "4y" },
   { name: "terraform-iac", type: "infra", age: "5y" },
 ];
 
 export const experience: Experience[] = [
   {
-    id: "teksystems",
-    period: "Oct 2025 → Present",
+    id: "eg",
+    period: "May 2026 → Present",
     active: true,
+    title: "Senior DevOps Engineer",
+    company: "EG A/S",
+    location: "Mangalore",
+    bullets: [
+      {
+        tag: "GITOPS",
+        text: "Migrated healthcare application promotions from CI pipelines to Kargo, adding staged promotion, verification gates, and pipeline updates.",
+      },
+      {
+        tag: "AUTO",
+        text: "Built an automated repository tag-cleanup process to reduce registry clutter and operational overhead.",
+      },
+      {
+        tag: "OPS",
+        text: "Executed Kubernetes, Argo CD, and Kargo upgrades and troubleshot production GitOps and cluster issues.",
+      },
+      {
+        tag: "OBS",
+        text: "Built Grafana dashboards for promotion health, deployment status, and cluster observability.",
+      },
+    ],
+  },
+  {
+    id: "teksystems",
+    period: "Oct 2025 → Apr 2026",
     title: "DBA — L3",
-    company: "TEKsystems // Client: Cisco",
+    company: "Cisco (via TEKsystems)",
     location: "Bengaluru",
     bullets: [
       {
@@ -142,7 +168,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Kubernetes",
-    tools: ["Helm", "Velero", "Argo CD", "Istio", "EKS"],
+    tools: ["Helm", "Velero", "Argo CD", "Kargo", "Istio", "EKS"],
     years: "5y",
   },
   {
@@ -152,7 +178,7 @@ export const skills: Skill[] = [
   },
   {
     name: "IaC / CI·CD",
-    tools: ["Terraform", "AWS CDK", "Jenkins", "GitHub Actions", "Bitbucket"],
+    tools: ["Terraform", "AWS CDK", "Jenkins", "GitHub Actions", "Bitbucket", "Kargo"],
     years: "5y",
   },
   {

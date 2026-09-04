@@ -52,10 +52,10 @@ export default function Hero({ onOpenTerminal }: HeroProps) {
             <span className={styles.cyan}>user</span> {profile.shortName}
           </p>
           <p>
-            <span className={styles.cyan}>role</span> sre / devops
+            <span className={styles.cyan}>role</span> senior devops
           </p>
           <p>
-            <span className={styles.cyan}>stack</span> aws · k8s · iac
+            <span className={styles.cyan}>stack</span> k8s · gitops · kargo
           </p>
           <p>
             <span className={styles.cyan}>status</span>{" "}

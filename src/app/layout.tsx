@@ -9,14 +9,14 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "M S Shreyank Sharma — DevOps / SRE",
+  title: "M S Shreyank Sharma — Senior DevOps Engineer",
   description:
-    "Interactive resume of M S Shreyank Sharma — DevOps / Site Reliability Engineer (CKA). AWS, Kubernetes, observability, and IaC.",
+    "Interactive resume of M S Shreyank Sharma — Senior DevOps Engineer (CKA). Kubernetes, GitOps, Kargo, AWS, and observability.",
   authors: [{ name: "M S Shreyank Sharma" }],
   openGraph: {
-    title: "M S Shreyank Sharma — DevOps / SRE",
+    title: "M S Shreyank Sharma — Senior DevOps Engineer",
     description:
-      "Interactive terminal resume — AWS, Kubernetes, observability, and reliability engineering.",
+      "Interactive terminal resume — Kubernetes, GitOps, Kargo, and reliability engineering.",
     type: "website",
   },
 };
