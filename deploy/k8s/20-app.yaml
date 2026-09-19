@@ -15,9 +15,11 @@ spec:
       labels:
         app: resume
     spec:
+      imagePullSecrets:
+        - name: pullfrom-ak
       containers:
         - name: app
-          image: resume-app:latest
+          image: artifactkeeper.shreyank.in/readonly/myresume:v5
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
@@ -54,10 +56,11 @@ metadata:
   name: resume
   namespace: resume
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: resume
   ports:
     - name: http
       port: 80
       targetPort: http
+      nodePort: 30003
